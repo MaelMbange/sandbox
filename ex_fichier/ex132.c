@@ -4,8 +4,6 @@
 #include <malloc.h> 
 #include <windows.h>
 
-//	fp = fopen("C:\\Users\\Maelm\\OneDrive\\Documents\\dossier bureau\\Cours\\Quettier\\exercices\\fichier\\ex liste",r+b);
-
 
 typedef struct 
 {
