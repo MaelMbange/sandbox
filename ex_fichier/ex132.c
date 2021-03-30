@@ -55,6 +55,7 @@ int main()
 					case 1: remove(alloc);
 							perror(NULL);
 							system("cls");
+							j = 0;
 					break;
 
 					case 2: Ecriture(alloc);
@@ -148,7 +149,7 @@ void Ecriture(char *alloc)
 		test = fseek(fp, 0, SEEK_END);
 		printf("test deplacement = %d\n",test);
 		test = fwrite(&membre,sizeof(FICHE),1,fp);
-		printf("test ouverture 1(membre) = %d\n\n",test);
+		printf("test d'ecriture 1(membre) = %d\n\n",test);
 
 		test = fclose(fp);
 		if (test !=0) perror("test close ouverture = bien fermé\n\n");
@@ -207,7 +208,7 @@ void affichage()
 		printf("nbel : %d\n",nbel);
 		for (int i = 0; i < nbel; i++)
 		{			
-			printf("%-20s  %-20s\t%d\n",(vec+i)->Nom,(vec+i)->Prenom,(vec+i)->age);
+			printf("%-20s  %-20s\t%d ans\n",(vec+i)->Nom,(vec+i)->Prenom,(vec+i)->age);
 		}
 		remove("./doc.test");
 
